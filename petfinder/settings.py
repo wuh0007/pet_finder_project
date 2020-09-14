@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
+    'pets.apps.PetsConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
