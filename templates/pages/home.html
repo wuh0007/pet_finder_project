@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block title %} | Home {% endblock %}
 {% block content %}
 
 {% load static %}
@@ -11,6 +12,7 @@
             <div class="carousel-item banner-max-height active item-bg">
                 <img class="d-block w-100 h-100" src="{% static 'img/pet-1.jpg' %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
+                  {% include 'includes/messages.html' %}
                     <h3>Highly Featured Pet</h3>
                     <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
