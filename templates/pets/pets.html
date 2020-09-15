@@ -134,54 +134,59 @@
                     <!-- Advanced search start -->
                     <div class="widget advanced-search2">
                         <h3 class="sidebar-title">Search your desire pet</h3>
-                        <form method="GET">
+                        <form action="{% url 'search' %}" method="">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="brand">
-                                  <option>Type</option>
-                                  <option>Dog</option>
-                                  <option>Cat</option>
+                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control search-fields" name="pet_type">
+                                    <option selected="true" disabled="disabled">Dog/Cat</option>
+                                    {% for pet_type in pet_type_search %}
+                                      <option value="{{pet_type}}">{{pet_type}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="location">
-                                    <option>Age</option>
-                                    <option>Puppy/Kitten</option>
-                                    <option>Young</option>
-                                    <option>Adult</option>
-                                    <option>Senior</option>
+                                <select class="form-control search-fields" name="age">
+                                    <option selected="true" disabled="disabled">Age</option>
+                                    {% for age in age_search %}
+                                      <option value="{{age}}">{{age}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="year">
-                                    <option>Location</option>
-                                    <option>United States</option>
-                                    <option>China</option>
+                                <select class="form-control search-fields" name="state">
+                                    <option selected="true" disabled="disabled">Location</option>
+                                    {% for state in state_search %}
+                                      <option value="{{state}}">{{state}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="category">
-                                    <option>Color</option>
-                                    <option>While</option>
-                                    <option>Brown</option>
-                                    <option>Black</option>
-                                    <option>Pattern</option>
-                                    <option>Other</option>
+                                <select class="form-control search-fields" name="color">
+                                    <option selected="true" disabled="disabled">Color</option>
+                                    {% for color in color_search %}
+                                      <option value="{{color}}">{{color}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="transmission">
-                                    <option>Gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
+                                <select class="form-control search-fields" name="gender">
+                                    <option selected="true" disabled="disabled">Gender</option>
+                                    {% for gender in gender_search %}
+                                      <option value="{{gender}}">{{gender}}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="range-slider clearfix">
-                                <label>Price</label>
-                                <div data-min="0" data-max="150000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="form-group mb-0">
-                                <button class="search-button btn">Search</button>
+                                            <label>Price</label>
+                                            <div data-min="0" data-max="20000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                            <div class="form-group">
+                                <button class="btn btn-block button-theme btn-md">
+                                    <i class="fa fa-search"></i> Search
+                                </button>
                             </div>
                         </form>
                     </div>

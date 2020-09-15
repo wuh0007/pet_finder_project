@@ -25,30 +25,30 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="model">
-                                    <option selected='selected' disabled='disabled'>Select Model</option>
-                                    {% for model in model_search %}
-                                      <option value="{{model}}">{{model}}</option>
+                                <select class="selectpicker search-fields" name="pet_type">
+                                    <option selected='selected' disabled='disabled'>Select Pet Type</option>
+                                    {% for pet_type in pet_type_search %}
+                                      <option value="{{pet_type}}">{{pet_type}}</option>
                                     {% endfor %}
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="city">
+                                <select class="selectpicker search-fields" name="age">
+                                    <option selected='selected' disabled='disabled'>Select Age</option>
+                                    {% for age in age_search %}
+                                      <option value="{{age}}">{{age}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                                <select class="selectpicker search-fields" name="state">
                                     <option selected='selected' disabled='disabled'>Select Location</option>
-                                    {% for city in city_search %}
-                                      <option value="{{city}}">{{city}}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="form-group">
-                                <select class="selectpicker search-fields" name="year">
-                                    <option selected='selected' disabled='disabled'>Select Year</option>
-                                    {% for year in year_search %}
-                                      <option value="{{year}}">{{year}}</option>
+                                    {% for state in state_search %}
+                                      <option value="{{state}}">{{state}}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -57,20 +57,20 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="body_style">
-                                    <option selected='selected' disabled='disabled'>Select Type Of Car</option>
-                                    {% for body_style in body_style_search %}
-                                      <option value="{{body_style}}">{{body_style}}</option>
+                                <select class="selectpicker search-fields" name="color">
+                                    <option selected='selected' disabled='disabled'>Select Color</option>
+                                    {% for color in color_search %}
+                                      <option value="{{color}}">{{color}}</option>
                                     {% endfor %}
                                 </select>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
-                                <select class="selectpicker search-fields" name="transmission">
-                                    <option selected='selected' disabled='disabled'>Transmission</option>
-                                    {% for transmission in transmission_search %}
-                                      <option value="{{transmission}}">{{transmission}}</option>
+                                <select class="selectpicker search-fields" name="gender">
+                                    <option selected='selected' disabled='disabled'>Select Gender</option>
+                                    {% for gender in gender_search %}
+                                      <option value="{{gender}}">{{gender}}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -78,7 +78,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <div class="range-slider">
-                                    <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                    <div data-min="0" data-max="20000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
